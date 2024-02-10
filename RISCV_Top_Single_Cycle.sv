@@ -263,8 +263,8 @@ Data_Memory DM(
 
 mux mux_WriteBack(
 
-.in1_i(Read_data_wire),
-.in2_i(ALUResult_wire),
+.in1_i(ALUResult_wire),
+.in2_i(Read_data_wire),
 .sel_i(MemtoReg_wire),
 
 .out_o(writedata_wire)
