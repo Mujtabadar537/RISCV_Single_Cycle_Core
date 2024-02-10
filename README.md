@@ -1,4 +1,4 @@
-# RISCV_Single_Cycle_Core
+# RISCV Datapath
 ![RISCV_Single_Cycle](https://github.com/Mujtabadar537/RISCV_Single_Cycle_Core/assets/111755551/9d4cb413-b544-4bff-8718-cee9c2dcbe25)
 
 # Waveform of Core
