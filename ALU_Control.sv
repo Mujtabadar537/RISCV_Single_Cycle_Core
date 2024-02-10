@@ -50,6 +50,14 @@ else if(ALUOp_i == 2'b10) begin
 	else if({funct7_bit5_i,funct3_i} == 4'b0100) begin
 		control_line_o = 4'b0011;//XOR operation
 	end
+	
+	else if({funct7_bit5_i,funct3_i} == 4'b0001) begin
+		control_line_o = 4'b0100;//SLL operation
+	end
+	
+	else if({funct7_bit5_i,funct3_i} == 4'b0101) begin
+		control_line_o = 4'b0101;//SRL operation
+	end
 
 end
 	
