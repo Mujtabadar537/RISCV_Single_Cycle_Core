@@ -26,6 +26,10 @@ case(ALU_Control_i)
 		ALUResult_o = operand1_i - operand2_i;
 	4'b0011:
 		ALUResult_o = operand1_i ^ operand2_i;
+	4'b0100:
+		ALUResult_o = operand1_i << operand2_i;
+	4'b0101:
+		ALUResult_o = operand1_i >> operand2_i;
 	default:
 		ALUResult_o = 32'h00000000;
 endcase
@@ -38,13 +42,6 @@ if(ALUResult_o == 32'h00000000) zero_o = 1;
 
 
 end
-
-
-
-
-
-
-
 
 
 
