@@ -24,7 +24,7 @@ end
 
 else if(ALUOp_i == 2'b01) begin
 
-	control_line_o = 4'b0110;//SUB operation
+	control_line_o = 4'b0011;//SUB operation
 
 end
 
@@ -36,7 +36,7 @@ else if(ALUOp_i == 2'b10) begin
 	end
 
 	else if({funct7_bit5_i,funct3_i} == 4'b1000) begin
-		control_line_o = 4'b0110;//SUB operation (R-type)
+		control_line_o = 4'b0011;//SUB operation (R-type)
 	end
 
 	else if({funct7_bit5_i,funct3_i} == 4'b0111) begin
@@ -48,35 +48,26 @@ else if(ALUOp_i == 2'b10) begin
 	end
 		
 	else if({funct7_bit5_i,funct3_i} == 4'b0100) begin
-		control_line_o = 4'b0011;//XOR operation
+		control_line_o = 4'b0100;//XOR operation
 	end
 	
 	else if({funct7_bit5_i,funct3_i} == 4'b0001) begin
-		control_line_o = 4'b0100;//SLL operation
+		control_line_o = 4'b0101;//SLL operation
 	end
 	
 	else if({funct7_bit5_i,funct3_i} == 4'b0101) begin
-		control_line_o = 4'b0101;//SRL operation
+		control_line_o = 4'b0110;//SRL operation
 	end
-
+	
+	else if({funct7_bit5_i,funct3_i} == 4'b0010) begin
+		control_line_o = 4'b0111;//SLT operation
+	end
+	
 end
 	
 
 
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 endmodule
